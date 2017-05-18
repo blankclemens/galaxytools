@@ -1,4 +1,4 @@
-<tool id="stats_perf_tool" name="Performance metrics" version="5.11.0">
+<tool id="stats_perf_tool" name="Performance metrics" version="5.11.1">
     <description>suitable for boolean classification problems (perf)</description>
     <requirements>
         <requirement type="package" version="5.11">perf</requirement>
@@ -12,6 +12,7 @@
             -file "${infile}"
             2>/dev/null
             > perf.out;
+
 
         #if str($plot):
             csplit --prefix 'perf' -s perf.out '/^$/';
